@@ -21,12 +21,16 @@ namespace Cob.TradingApps.BtcData.Exchanges
          BaseJsonUrl = BaseUrl;
       }
 
-      public override void ConnectToApi()
+        public override void ConnectToApi() {
+            ConnectToApi(null, null);
+        }
+
+      public void ConnectToApi(string key, string secret)
       {
          try
          {
-            var apiSecret = ConfigurationManager.AppSettings["ApiSecret"];
-            var apiKey = ConfigurationManager.AppSettings["ApiKey"];
+            var apiSecret = secret ?? ConfigurationManager.AppSettings["ApiSecret"];
+            var apiKey = key ?? ConfigurationManager.AppSettings["ApiKey"];
 
             if (string.IsNullOrEmpty(apiSecret))
                throw new Exception("Missing ApiSecret in App.config");
