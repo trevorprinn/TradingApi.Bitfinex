@@ -41,7 +41,9 @@ namespace TradingApi.ModelObjects.Bitfinex.Json
       public string Amount { get; set; }
 
       [JsonProperty("timestamp")]
-      public string Timestamp { get; set; }
+      public string BFTimestamp { get; set; }
+
+        public DateTime Timestamp => DateTimeOffset.FromUnixTimeSeconds((long)double.Parse(BFTimestamp)).UtcDateTime;
 
       public override string ToString()
       {
