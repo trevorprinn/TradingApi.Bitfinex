@@ -50,16 +50,55 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BitfinexApi.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexActiveCreditsResponse.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexActiveSwapsInMarginResponse.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexBalanceResponse.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexCancelMultipleOrderPost.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexCancelOrderPost.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexCancelReplaceOrderResponse.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexCancelReplacePost.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexClaimPositionPost.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexCloseSwapPost.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexDepositPost.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexDepositResponse.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexHistoryPost.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexHistoryResponse.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexLendbookResponse.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexLendsResponse.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexMarginInfoResponse.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexMarginPositionResponse.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexMultipleNewOrderResponse.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexMultipleNewOrdersPost.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexMyTradesPost.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexMyTradesResponse.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexNewOfferPost.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexNewOrderPost.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexNewOrderResponse.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexOfferStatusPost.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexOfferStatusResponse.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexOrderBookGet.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexOrderStatusPost.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexOrderStatusResponse.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexPostBase.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexPublicTickerGet.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexSymbolsDetailsResponse.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexSymbolStatsResponse.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\BitfinexTradesGet.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\ErrorResponse.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\LendbookTypes\Ask.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\LendbookTypes\Bid.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\MarginInfoTypes\MarginLimit.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\MultipleOrderTypes\OrderId.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\OrderbookTypes\Ask.cs" />
+    <Compile Include="ModelObjects\Bitfinex\Json\OrderbookTypes\Bid.cs" />
+    <Compile Include="ModelObjects\BtcInfo.cs" />
+    <Compile Include="ModelObjects\BtcMarketData.cs" />
+    <Compile Include="ModelObjects\Logger.cs" />
+    <Compile Include="ModelObjects\Utility\Common.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BitfinexApi.Events.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TradingApi.ModelObjects\TradingApi.ModelObjects.csproj">
-      <Project>{f0f159a5-c5d6-4cbf-b061-7943f8f7bc5a}</Project>
-      <Name>TradingApi.ModelObjects</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
