@@ -1317,14 +1317,14 @@ namespace TradingApi.Bitfinex {
         private RestClient GetRestClient(string requestUrl) {
             var client = new RestClient();
             var url = BaseBitfinexUrl + requestUrl;
-            client.BaseUrl = url;
+            client.BaseUrl =  new Uri(url);
             return client;
         }
 
         private IRestResponse GetBaseResponse(string url) {
             try {
                 var client = new RestClient {
-                    BaseUrl = BaseBitfinexUrl
+                    BaseUrl = new Uri(BaseBitfinexUrl)
                 };
                 var request = new RestRequest {
                     Resource = url
@@ -1342,7 +1342,7 @@ namespace TradingApi.Bitfinex {
         private async Task<IRestResponse> GetBaseResponseAsync(string url) {
             try {
                 var client = new RestClient {
-                    BaseUrl = BaseBitfinexUrl
+                    BaseUrl = new Uri(BaseBitfinexUrl)
                 };
                 var request = new RestRequest {
                     Resource = url
