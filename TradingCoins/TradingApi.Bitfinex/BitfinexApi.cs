@@ -753,7 +753,12 @@ namespace TradingApi.Bitfinex {
                 var client = GetRestClient(BalanceRequestUrl);
                 var response = await GetRestResponseAsync(client, balancePost);
 
-                var balancesObj = JsonConvert.DeserializeObject<IList<BitfinexBalanceResponse>>(response.Content);
+                IList<BitfinexBalanceResponse> balancesObj;
+                try {
+                    balancesObj = JsonConvert.DeserializeObject<IList<BitfinexBalanceResponse>>(response.Content);
+                } catch (Exception ex) {
+                    throw new ReplyParseException(response.Content, ex);
+                }
                 OnBalanceResponseMsg(balancesObj);
 
                 Logger.Log.InfoFormat("Balances:");
@@ -1369,4 +1374,9 @@ namespace TradingApi.Bitfinex {
         }
 
     }
+
+    public class ReplyParseException : Exception {
+        public ReplyParseException(string reply, Exception ex) : base($"Reply:\r\n{reply}", ex) { }
+    }
+
 }
